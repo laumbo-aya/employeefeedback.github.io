@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Employee feedback form sample" />
+    <title>Employee Feedback Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="form-card" aria-labelledby="form-title">
+        <header class="form-header">
+          <p class="eyebrow">INTERNAL FEEDBACK</p>
+          <h1 id="form-title">Employee feedback form</h1>
+          <p>Share your feedback to help improve the employee experience.</p>
+        </header>
+
+        <form action="#" method="post">
+          <section aria-labelledby="employee-details">
+            <h2 id="employee-details">Employee details</h2>
+            <div class="field-grid">
+              <div class="field-group full-width">
+                <label for="name">Full name <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required />
+              </div>
+              <div class="field-group">
+                <label for="email">Email address <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required />
+              </div>
+              <div class="field-group">
+                <label for="employee-id">Employee ID <span aria-hidden="true">*</span></label>
+                <input id="employee-id" name="employee_id" type="text" placeholder="e.g. EMP-1024" required />
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="feedback-details">
+            <h2 id="feedback-details">Your feedback</h2>
+            <div class="field-group">
+              <label for="division">Division <span aria-hidden="true">*</span></label>
+              <select id="division" name="division" required>
+                <option value="" selected disabled>Select your division</option>
+                <option value="division-1">Division 1</option>
+                <option value="division-2">Division 2</option>
+                <option value="division-3">Division 3</option>
+                <option value="division-4">Division 4</option>
+                <option value="division-5">Division 5</option>
+                <option value="division-6">Division 6</option>
+                <option value="division-7">Division 7</option>
+              </select>
+            </div>
+
+            <fieldset class="rating-group">
+              <legend>Overall rating <span aria-hidden="true">*</span></legend>
+              <p class="rating-help">1 is very dissatisfied. 5 is very satisfied.</p>
+              <div class="rating-options">
+                <label><input type="radio" name="rating" value="1" required /><span>1</span><small>Very dissatisfied</small></label>
+                <label><input type="radio" name="rating" value="2" /><span>2</span><small>Dissatisfied</small></label>
+                <label><input type="radio" name="rating" value="3" /><span>3</span><small>Neutral</small></label>
+                <label><input type="radio" name="rating" value="4" /><span>4</span><small>Satisfied</small></label>
+                <label><input type="radio" name="rating" value="5" /><span>5</span><small>Very satisfied</small></label>
+              </div>
+            </fieldset>
+
+            <div class="field-group">
+              <label for="comments">Comments <span aria-hidden="true">*</span></label>
+              <textarea id="comments" name="comments" rows="6" placeholder="Write your feedback here..." required></textarea>
+            </div>
+          </section>
+
+          <button type="submit">Submit feedback</button>
+          <p class="privacy-note">Your feedback will be reviewed by the appropriate internal team.</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
